@@ -1,5 +1,7 @@
 # Custom Android Toolbar
 
+<img style='width: 600px' src="app.png"></img>
+
 Boilerplate project with customized toolbar that supports:
 
 - Custom back image
