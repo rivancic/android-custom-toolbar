@@ -2,7 +2,6 @@ package com.rivancic.toolbar;
 
 import android.os.Bundle;
 import android.support.v4.app.NavUtils;
-import android.support.v4.content.ContextCompat;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
@@ -10,6 +9,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -39,14 +39,14 @@ public class MainActivity extends AppCompatActivity {
         }
         this.actionBar = getSupportActionBar();
         if (actionBar != null) {
-            actionBar.setHomeAsUpIndicator(ContextCompat.getDrawable(this, R.drawable.back_arrow_white));
-            actionBar.setDisplayShowHomeEnabled(true); // show or hide the default home button
-            actionBar.setDisplayHomeAsUpEnabled(true);
+//            actionBar.setHomeAsUpIndicator(ContextCompat.getDrawable(this, R.drawable.back_arrow_white));
+            actionBar.setDisplayShowHomeEnabled(false); // show or hide the default home button
+            actionBar.setDisplayHomeAsUpEnabled(false);
             actionBar.setDisplayShowCustomEnabled(true); // enable overriding the default toolbar layout
             actionBar.setDisplayShowTitleEnabled(false); // disable the default title element here (for centered title)
             setBackTextClickable();
-            setBackText("Back");
-            setTitle(getTitle());
+            setBackText("北京");
+            setTitle("custom title");
         }
     }
 
@@ -76,6 +76,7 @@ public class MainActivity extends AppCompatActivity {
                 public void onClick(View v) {
 
                     try {
+                        Toast.makeText(MainActivity.this,"you click custom navigationTitle",Toast.LENGTH_SHORT).show();
                         NavUtils.navigateUpFromSameTask(MainActivity.this);
                     } catch (IllegalArgumentException iae) {
                         LOG.log(Level.SEVERE, "You should specify parent activity", iae);
