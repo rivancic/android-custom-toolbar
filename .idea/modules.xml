@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/Toolbar.iml" filepath="$PROJECT_DIR$/Toolbar.iml" />
+      <module fileurl="file://$PROJECT_DIR$/android-custom-toolbar.iml" filepath="$PROJECT_DIR$/android-custom-toolbar.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
     </modules>
   </component>
